@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音楽再生アプリ</title>
+    <style>
+        .button {
+            display: inline-block;
+            width: 150px;
+            height: 50px;
+            background-color: #aee1ff;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            line-height: 50px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        h3 {
+            text-align: center;
+            background: linear-gradient(to right, gold, goldenrod);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h3>オールスター感謝祭サウンド</h3>
+    <div>
+        <button class="button" onclick="playSound('./sounds/title.mp3')">番組タイトル</button>
+        <button class="button" onclick="playSound('./sounds/period.mp3')">ピリオド開始</button>
+    </div>
+    <div>
+        <button class="button" onclick="playSound('./sounds/quiz.mp3')">出題</button>
+        <button class="button" onclick="playSound('./sounds/readygo.mp3')">レディーゴー</button>
+    </div>
+    <div>
+        <button class="button" onclick="playSound('./sounds/answercheck.mp3')">アンサーチェック</button>
+        <button class="button" onclick="playSound('./sounds/answercheck02.mp3')">正解はコチラ</button>
+    </div>
+    <div>
+        <button class="button" onclick="playSound('./sounds/ranking.mp3')">ランキング</button>
+        <button class="button" onclick="playSound('./sounds/winner.mp3')">優勝</button>
+    </div>
+
+    <script>
+        function playSound(soundFile) {
+            var audio = new Audio(soundFile);
+            audio.play();
+        }
+    </script>
+</body>
+
+</html>
