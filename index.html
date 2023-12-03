@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>音楽再生アプリ</title>
     <style>
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
         .button {
             display: inline-block;
             width: 150px;
@@ -29,24 +39,25 @@
     </style>
 </head>
 
-
 <body>
-    <h3>オールスター感謝祭サウンド</h3>
-    <div>
-        <button class="button" onclick="playSound('./sounds/title.mp3')">番組タイトル</button>
-        <button class="button" onclick="playSound('./sounds/period.mp3')">ピリオド開始</button>
-    </div>
-    <div>
-        <button class="button" onclick="playSound('./sounds/quiz.mp3')">出題</button>
-        <button class="button" onclick="playSound('./sounds/readygo.mp3')">レディーゴー</button>
-    </div>
-    <div>
-        <button class="button" onclick="playSound('./sounds/answercheck.mp3')">アンサーチェック</button>
-        <button class="button" onclick="playSound('./sounds/answercheck02.mp3')">正解はコチラ</button>
-    </div>
-    <div>
-        <button class="button" onclick="playSound('./sounds/ranking.mp3')">ランキング</button>
-        <button class="button" onclick="playSound('./sounds/winner.mp3')">優勝</button>
+    <div class="container">
+        <h3>オールスター感謝祭サウンド</h3>
+        <div>
+            <button class="button" onclick="playSound('./sounds/title.mp3')">番組タイトル</button>
+            <button class="button" onclick="playSound('./sounds/period.mp3')">ピリオド開始</button>
+        </div>
+        <div>
+            <button class="button" onclick="playSound('./sounds/quiz.mp3')">出題</button>
+            <button class="button" onclick="playSound('./sounds/readygo.mp3')">レディーゴー</button>
+        </div>
+        <div>
+            <button class="button" onclick="playSound('./sounds/answercheck.mp3')">アンサーチェック</button>
+            <button class="button" onclick="playSound('./sounds/answercheck02.mp3')">正解はコチラ</button>
+        </div>
+        <div>
+            <button class="button" onclick="playSound('./sounds/ranking.mp3')">ランキング</button>
+            <button class="button" onclick="playSound('./sounds/winner.mp3')">優勝</button>
+        </div>
     </div>
 
     <script>
